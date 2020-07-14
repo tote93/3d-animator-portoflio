@@ -6,3 +6,162 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    position: relative;
+    min-height: 400vh;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+
+.header {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 10vh;
+    transition: 0.4s;
+    z-index: 10000;
+}
+
+.header__ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.header__anchor {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.header__toggle {
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+}
+
+.header__toggle:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    top: -5px;
+    width: 20px;
+    background: #fff;
+    height: 3px;
+}
+
+.header__toggle:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    top: 5px;
+    width: 20px;
+    background: #fff;
+    height: 3px;
+}
+
+.header__logo .header__anchor {
+    order: 1;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.header__toggle {
+    order: 2;
+}
+
+.header__item {
+    order: 3;
+    width: 100%;
+    margin: 2rem;
+    height: 0px;
+    text-align: center;
+    left: -100vh;
+    position: relative;
+    visibility: hidden;
+}
+
+.sticky {
+    transition: 0.8s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    height: 6vh;
+    background: #fff;
+}
+
+.active .header__toggle:after,
+.active .header__toggle:before,
+.active .header__toggle,
+.sticky .header__toggle:after,
+.sticky .header__toggle:before,
+.sticky .header__toggle {
+    background: #111;
+}
+
+.sticky .header__anchor {
+    color: #111;
+}
+
+/* Home Section */
+
+.home {
+    background: url("../img/bg.jpg");
+    background-size: cover;
+    display: flex;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.home:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../img/snow.png');
+    animation: snow 20s infinite linear;
+    transform: rotate(180deg);
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+.home__title {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+}
+
+.home__subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+}
