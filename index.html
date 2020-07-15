@@ -25,7 +25,7 @@
             <li class="header__logo"><a class="header__anchor" onclick="toggle()" href="#">Logo</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Home</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#about">About Me</a></li>
-            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Portfolio</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#portfolio">Portfolio</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Contact</a></li>
             <li class="header__toggle"><a class="header__anchor" href="#"><span class="header__bars"></span></a></li>
         </ul>
@@ -50,6 +50,52 @@
             <div class="about__me">
                 <a href="#" class="btn">More about me</a>
             </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__introduction">
+            <h2 class="portfolio__title">My Projects</h2>
+            <h3 class="portfolio__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </h3>
+        </div>
+        <div class="portfolio__ilustration">
+            <span class="portfolio__span" style="--i:1"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:2"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:3"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:4"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:5"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:6"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:7"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+            <span class="portfolio__span" style="--i:8"><img class="portfolio__imgCard" src="./img/card.jpeg"
+                    alt=""></span>
+        </div>
+        <div class="portfolio__introduction">
+            <h2 class="portfolio__title">Play My Demos</h2>
+            <h3 class="portfolio__description">
+                You can play my 3D render clicking the following demo-videos.
+            </h3>
+        </div>
+        <div class="portfolio__animation">
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="0" src="./video/video0.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="1" src="./video/video1.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="2" src="./video/video2.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="3" src="./video/video3.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="3" src="./video/video3.mp4" muted
+                autoplay loop></video>
         </div>
     </section>
     <script src="src/app.js" async defer></script>

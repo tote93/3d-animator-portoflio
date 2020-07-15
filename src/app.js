@@ -14,3 +14,16 @@ function toggle() {
     const header = document.getElementById('header');
     header.classList.toggle('active')
 }
+
+function playFullScreenVideo(e) {
+    const video = document.getElementById(e.id);
+    video.currentTime = 0;
+    video.play();
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+    }
+}

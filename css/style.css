@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+:root {
+    --section_titles: 3em;
+    --section_introduction: 1.2em;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -158,13 +163,13 @@ body {
 }
 
 .home__title {
-    font-size: 3em;
+    font-size: var(--section_titles);
     text-align: center;
     color: #fff;
 }
 
 .home__subtitle {
-    font-size: 1.2em;
+    font-size: var(--section_introduction);
     text-align: center;
     color: #fff;
 }
@@ -190,7 +195,7 @@ body {
 
 .about__introduction {
     color: #fff;
-    font-size: 1.2em;
+    font-size: var(--section_introduction);
     font-weight: 300;
     padding: 2vh;
     letter-spacing: 1;
@@ -199,10 +204,11 @@ body {
 
 .about__image-profile {
     border-radius: 1vh;
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
     text-align: center;
     margin: 2vh auto;
+    object-fit: cover;
 }
 
 .about__me {
@@ -244,4 +250,61 @@ body {
 .btn:hover:before {
     left: 100%;
     transition: 1s;
+}
+
+/* Portfolio section */
+
+.portfolio {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio__introduction {
+    padding: 2vh;
+
+}
+
+.portfolio__title {
+    color: #111;
+    font-size: var(--section_titles);
+    font-weight: 600;
+}
+
+.portfolio__description {
+    font-size: var(--section_introduction);
+    font-weight: 300;
+    letter-spacing: 1;
+    line-height: 2;
+    text-justify: distribute-all-lines;
+}
+
+.portfolio__ilustration {
+    margin: 10vh auto;
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(100%, 1fr));
+    grid-gap: 1fr;
+}
+
+.portfolio__imgCard {
+    max-width: 100%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.portfolio__video {
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+}
+
+.portfolio__video:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
 }
