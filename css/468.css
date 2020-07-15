@@ -65,6 +65,10 @@
         transition: 0.4s;
     }
 
+    .about__image-profile {
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    }
+
     .header__logo {
         order: 1;
     }

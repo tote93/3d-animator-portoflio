@@ -9,3 +9,8 @@ toggleBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
     header.classList.toggle("sticky", window.scrollY > 0);
 })
+
+function toggle() {
+    const header = document.getElementById('header');
+    header.classList.toggle('active')
+}

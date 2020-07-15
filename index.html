@@ -19,19 +19,38 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <!-- Menu Section -->
     <header class="header">
         <ul class="header__ul">
-            <li class="header__logo"><a class="header__anchor" href="#">Logo</a></li>
-            <li class="header__item"><a class="header__anchor" href="#">Home</a></li>
-            <li class="header__item"><a class="header__anchor" href="#">About Me</a></li>
-            <li class="header__item"><a class="header__anchor" href="#">Portfolio</a></li>
-            <li class="header__item"><a class="header__anchor" href="#">Contact</a></li>
+            <li class="header__logo"><a class="header__anchor" onclick="toggle()" href="#">Logo</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Home</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#about">About Me</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Portfolio</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Contact</a></li>
             <li class="header__toggle"><a class="header__anchor" href="#"><span class="header__bars"></span></a></li>
         </ul>
     </header>
-    <section class="home">
+    <!-- Home Section -->
+    <section class="home" id="home">
         <h1 class="home__title">Name Lastname Lastname</h1>
         <h2 class="home__subtitle">Animator 3d and Graphic designer</h2>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__card">
+            <h2 class="about__title">About Me</h2>
+            <div class="about__introduction">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="about__profile">
+                <img src="./img/profile.jpg" alt="Profile Image" class="about__image-profile">
+            </div>
+            <div class="about__me">
+                <a href="#" class="btn">More about me</a>
+            </div>
+        </div>
     </section>
     <script src="src/app.js" async defer></script>
 </body>
