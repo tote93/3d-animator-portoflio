@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/468.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -23,10 +24,10 @@
     <header class="header">
         <ul class="header__ul">
             <li class="header__logo"><a class="header__anchor" onclick="toggle()" href="#">Logo</a></li>
-            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Home</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#home">Home</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#about">About Me</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#portfolio">Portfolio</a></li>
-            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#">Contact</a></li>
+            <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#contact">Contact</a></li>
             <li class="header__toggle"><a class="header__anchor" href="#"><span class="header__bars"></span></a></li>
         </ul>
     </header>
@@ -35,6 +36,7 @@
         <h1 class="home__title">Name Lastname Lastname</h1>
         <h2 class="home__subtitle">Animator 3d and Graphic designer</h2>
     </section>
+    <span class="header_end"></span>
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about__card">
@@ -45,13 +47,14 @@
                 nisi ut aliquip ex ea commodo consequat.
             </div>
             <div class="about__profile">
-                <img src="./img/profile.jpg" alt="Profile Image" class="about__image-profile">
+                <img src="./img/profile.jpg" alt="Profile Image" class="about__image_profile">
             </div>
             <div class="about__me">
-                <a href="#" class="btn">More about me</a>
+                <a href="#" class="btn btnProfile">More about me</a>
             </div>
         </div>
     </section>
+    <span class="about_end"></span>
     <section class="portfolio" id="portfolio">
         <div class="portfolio__introduction">
             <h2 class="portfolio__title">My Projects</h2>
@@ -80,8 +83,8 @@
                     alt=""></span>
         </div>
         <div class="portfolio__introduction">
-            <h2 class="portfolio__title">Play My Demos</h2>
-            <h3 class="portfolio__description">
+            <h2 class="portfolio__title video_title">Play My Demos</h2>
+            <h3 class="portfolio__description video_description">
                 You can play my 3D render clicking the following demo-videos.
             </h3>
         </div>
@@ -94,10 +97,67 @@
                 autoplay loop></video>
             <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="3" src="./video/video3.mp4" muted
                 autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="0" src="./video/video0.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="1" src="./video/video1.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="2" src="./video/video2.mp4" muted
+                autoplay loop></video>
             <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="3" src="./video/video3.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="0" src="./video/video0.mp4" muted
+                autoplay loop></video>
+            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="1" src="./video/video1.mp4" muted
                 autoplay loop></video>
         </div>
     </section>
+    <span class="portfolio_end"></span>
+    <section class="contact">
+        <div class="content">
+            <div class="contact__content">
+                <h2 class="content__title">Send my a Message</h2>
+                <h3 class="content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+            </div>
+            <div class="contact__formContent">
+                <form class="contact__form" accept-charset="UTF-8" action="https://formspree.io/xayppzra"
+                    enctype="multipart/form-data" method="POST">
+                    <input class="contact__input" type="text" name="fullName" id="fullName" placeholder="Full Name"
+                        required>
+                    <input class="contact__input" type="email" name="email" id="email" placeholder="Email Address"
+                        required>
+                    <textarea class="contact__message" name="message" id="message" placeholder="Message"
+                        required></textarea>
+                    <button class="btn btnSubmit">Send</button>
+                </form>
+            </div>
+            <div class="content__socialMedia">
+                <ul class="content__list">
+                    <li class="content__listElement">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="content__listElement">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="content__listElement">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content__copyright">
+                <p class="content__copyright_text">Design & developed by <a class="content__url"
+                        href="https://www.linkedin.com/in/i62gorej/" target="_blank"> José Luis Gordillo Relaño</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
     <script src="src/app.js" async defer></script>
 </body>
 </html>
