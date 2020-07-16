@@ -1,0 +1,144 @@
+@media all and (max-width:468px) {
+    .header.active {
+        height: 100%;
+        animation: fadeHeader 1s forwards;
+    }
+
+    .header:not(.active) {
+        transition: 1s;
+        animation: fadeOutHeader 1s forwards;
+    }
+
+    @keyframes fadeOutHeader {
+        100% {
+            height: 10vh;
+        }
+
+        0% {
+            height: 100vh;
+        }
+    }
+
+    @keyframes fadeHeader {
+        0% {
+            height: 10vh;
+        }
+
+        100% {
+            height: 100vh;
+        }
+    }
+
+    .sticky {
+        margin: 0;
+    }
+
+    .active {
+        left: 0vh;
+        transition: 0.5s;
+        visibility: visible;
+        z-index: 1000;
+        background: #fff;
+    }
+
+    .active .header__item {
+        left: 0;
+        visibility: visible;
+    }
+
+    .active .header__anchor {
+        color: #111;
+    }
+
+    .sticky .header__toggle:after,
+    .sticky .header__toggle:before,
+    .sticky .header__toggle {
+        background: #111;
+    }
+}
+
+@media all and (min-width:468px) {
+    .header {
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        transition: 0.4s;
+    }
+
+    .about__image_profile {
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    }
+
+    .header__logo {
+        order: 1;
+    }
+
+    .header__toggle {
+        order: 3;
+        display: none;
+    }
+
+    .header__item {
+        order: 2;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        height: 0px;
+        position: relative;
+        visibility: visible;
+    }
+
+    .header__ul {
+        flex-wrap: initial;
+        width: 100%;
+        align-items: initial;
+    }
+
+    /* Portfolio Styles */
+
+    .portfolio__ilustration {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: rotateViewCards 20s linear infinite;
+    }
+
+
+    @keyframes rotateViewCards {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
+
+    .portfolio__span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    }
+
+    .portfolio__imgCard {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio__video {
+        margin: 1vh 2vh;
+        width: 20%;
+        height: 30%;
+    }
+}
