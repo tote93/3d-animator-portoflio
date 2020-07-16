@@ -4,8 +4,13 @@
         animation: fadeHeader 1s forwards;
     }
 
+    .active .header__item {
+        visibility: visible;
+        opacity: 1;
+    }
+
     .header:not(.active) {
-        transition: 1s;
+
         animation: fadeOutHeader 1s forwards;
     }
 
@@ -43,7 +48,7 @@
 
     .active .header__item {
         left: 0;
-        visibility: visible;
+        opacity: 1;
     }
 
     .active .header__anchor {
@@ -85,6 +90,7 @@
         left: 0;
         height: 0px;
         position: relative;
+        opacity: 1;
         visibility: visible;
     }
 

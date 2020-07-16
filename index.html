@@ -28,7 +28,8 @@
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#about">About Me</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#portfolio">Portfolio</a></li>
             <li class="header__item"><a class="header__anchor" onclick="toggle()" href="#contact">Contact</a></li>
-            <li class="header__toggle"><a class="header__anchor" href="#"><span class="header__bars"></span></a></li>
+            <li class="header__toggle" onclick="toggle()"><a class="header__anchor" href="#"><span
+                        class="header__bars"></span></a></li>
         </ul>
     </header>
     <!-- Home Section -->
@@ -36,7 +37,6 @@
         <h1 class="home__title">Name Lastname Lastname</h1>
         <h2 class="home__subtitle">Animator 3d and Graphic designer</h2>
     </section>
-    <span class="header_end"></span>
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about__card">
@@ -54,7 +54,6 @@
             </div>
         </div>
     </section>
-    <span class="about_end"></span>
     <section class="portfolio" id="portfolio">
         <div class="portfolio__introduction">
             <h2 class="portfolio__title">My Projects</h2>
@@ -83,7 +82,7 @@
                     alt=""></span>
         </div>
         <div class="portfolio__introduction">
-            <h2 class="portfolio__title video_title">Play My Demos</h2>
+            <h2 class="portfolio__title video_title">3D Renders</h2>
             <h3 class="portfolio__description video_description">
                 You can play my 3D render clicking the following demo-videos.
             </h3>
@@ -101,21 +100,13 @@
                 autoplay loop></video>
             <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="1" src="./video/video1.mp4" muted
                 autoplay loop></video>
-            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="2" src="./video/video2.mp4" muted
-                autoplay loop></video>
-            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="3" src="./video/video3.mp4" muted
-                autoplay loop></video>
-            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="0" src="./video/video0.mp4" muted
-                autoplay loop></video>
-            <video class="portfolio__video" onclick="playFullScreenVideo(this)" id="1" src="./video/video1.mp4" muted
-                autoplay loop></video>
         </div>
+        <button class="btn btnVideos">Watch more demos</button>
     </section>
-    <span class="portfolio_end"></span>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="content">
             <div class="contact__content">
-                <h2 class="content__title">Send my a Message</h2>
+                <h2 class="content__title">Send me a Message</h2>
                 <h3 class="content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
             </div>
             <div class="contact__formContent">
