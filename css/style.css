@@ -13,11 +13,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body {
     position: relative;
     min-height: 400vh;
-    overflow-x: hidden;
     user-select: none;
+    overflow-x: hidden;
+}
+
+section {
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
 /* Header Section */
@@ -101,8 +107,40 @@ body {
     height: 0px;
     text-align: center;
     position: relative;
+    opacity: 0;
     visibility: hidden;
-    transition-delay: 0.5s ease-in-out;
+}
+
+.active .header__item:nth-child(1) {
+    animation: fadeInElements 0.2s linear forwards;
+}
+
+.active .header__item:nth-child(2) {
+    animation: fadeInElements 0.3s linear forwards;
+}
+
+.active .header__item:nth-child(3) {
+    animation: fadeInElements 0.4s linear forwards;
+}
+
+.active .header__item:nth-child(4) {
+    animation: fadeInElements 0.5s linear forwards;
+}
+
+.active .header__item:nth-child(5) {
+    animation: fadeInElements 0.6s linear forwards;
+}
+
+@keyframes fadeInElements {
+    0% {
+        opacity: 0;
+        left: -15vh;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
 }
 
 .sticky {
@@ -188,6 +226,11 @@ body {
     transition-delay: 0.5s;
 }
 
+.about__card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .about__title {
     font-size: 2.8em;
     font-weight: 500;
@@ -230,6 +273,7 @@ body {
     transition: 0.5s;
     background: #6796DE;
     overflow: hidden;
+    margin: 1vh auto;
 }
 
 .btn:before {
@@ -268,13 +312,15 @@ body {
 
 .portfolio__introduction {
     padding: 2vh;
-
+    max-width: 800px;
+    margin: 10 auto;
 }
 
 .portfolio__title {
     color: #111;
     font-size: var(--section_titles);
     font-weight: 600;
+    margin-top: 10vh;
 }
 
 .portfolio__description {
@@ -324,6 +370,7 @@ body {
     position: relative;
     text-align: center;
     width: 100%;
+    margin-top: 10vh;
 }
 
 .contact__content {
@@ -353,7 +400,7 @@ body {
     max-width: 50rem;
     margin: 0 auto;
     display: flex;
-    padding: 2vh;
+    padding: 2vh 3vh;
 }
 
 .contact__form {
